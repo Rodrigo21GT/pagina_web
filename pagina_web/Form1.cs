@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.IO;
 
 namespace pagina_web
 {
@@ -55,6 +56,17 @@ namespace pagina_web
             addressBar.Width = goButton.Left - addressBar.Left;
         }
 
+        private void Guardar(string fileName, string texto)
+        {
+            //Abrir el archivo: Write sobreescribe el archivo, Append agrega los datos al final del archivo
+            FileStream stream = new FileStream(fileName, FileMode.Append, FileAccess.Write);
+            //Crear un objeto para escribir el archivo
+            StreamWriter writer = new StreamWriter(stream);
+            writer.WriteLine(texto);
+            //Cerrar el archivo
+            writer.Close();
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             string link = "";
@@ -67,6 +79,7 @@ namespace pagina_web
             {
                 webView.CoreWebView2.Navigate(link);
             }
+            Guardar(@"C:\Users\rodri\Historial.txt", addressBar.Text);
         }
 
         private void navegarToolStripMenuItem_Click(object sender, EventArgs e)
@@ -91,8 +104,16 @@ namespace pagina_web
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            addressBar.SelectedIndex = 0;
-            //webBrowser1.GoHome();
+            string Line;
+            int counter = 0;
+
+            StreamReader Lector = new StreamReader(@"C:\Users\rodri\Historial.txt");
+            while ((Line = Lector.ReadLine()) != null)
+            {
+                addressBar.Items.Add(Line);
+                counter++;
+            }
+            Lector.Close();
         }
 
         private void webView_Click(object sender, EventArgs e)

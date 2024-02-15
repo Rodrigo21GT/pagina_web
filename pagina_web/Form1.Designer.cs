@@ -54,7 +54,8 @@ namespace pagina_web
             this.navegarToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1292, 28);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(969, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -65,38 +66,37 @@ namespace pagina_web
             this.haciaAtrasToolStripMenuItem,
             this.haciaAdelanteToolStripMenuItem});
             this.navegarToolStripMenuItem.Name = "navegarToolStripMenuItem";
-            this.navegarToolStripMenuItem.Size = new System.Drawing.Size(79, 24);
+            this.navegarToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
             this.navegarToolStripMenuItem.Text = "Navegar";
             this.navegarToolStripMenuItem.Click += new System.EventHandler(this.navegarToolStripMenuItem_Click);
             // 
             // inicioToolStripMenuItem
             // 
             this.inicioToolStripMenuItem.Name = "inicioToolStripMenuItem";
-            this.inicioToolStripMenuItem.Size = new System.Drawing.Size(192, 26);
+            this.inicioToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.inicioToolStripMenuItem.Text = "Inicio";
             this.inicioToolStripMenuItem.Click += new System.EventHandler(this.inicioToolStripMenuItem_Click);
             // 
             // haciaAtrasToolStripMenuItem
             // 
             this.haciaAtrasToolStripMenuItem.Name = "haciaAtrasToolStripMenuItem";
-            this.haciaAtrasToolStripMenuItem.Size = new System.Drawing.Size(192, 26);
+            this.haciaAtrasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.haciaAtrasToolStripMenuItem.Text = "Hacia atras";
             this.haciaAtrasToolStripMenuItem.Click += new System.EventHandler(this.haciaAtrasToolStripMenuItem_Click);
             // 
             // haciaAdelanteToolStripMenuItem
             // 
             this.haciaAdelanteToolStripMenuItem.Name = "haciaAdelanteToolStripMenuItem";
-            this.haciaAdelanteToolStripMenuItem.Size = new System.Drawing.Size(192, 26);
+            this.haciaAdelanteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.haciaAdelanteToolStripMenuItem.Text = "Hacia adelante";
             this.haciaAdelanteToolStripMenuItem.Click += new System.EventHandler(this.haciaAdelanteToolStripMenuItem_Click);
             // 
             // goButton
             // 
             this.goButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.goButton.Location = new System.Drawing.Point(1135, 34);
-            this.goButton.Margin = new System.Windows.Forms.Padding(4);
+            this.goButton.Location = new System.Drawing.Point(851, 28);
             this.goButton.Name = "goButton";
-            this.goButton.Size = new System.Drawing.Size(111, 46);
+            this.goButton.Size = new System.Drawing.Size(83, 37);
             this.goButton.TabIndex = 1;
             this.goButton.Text = ">";
             this.goButton.UseVisualStyleBackColor = true;
@@ -105,23 +105,17 @@ namespace pagina_web
             // addressBar
             // 
             this.addressBar.FormattingEnabled = true;
-            this.addressBar.Items.AddRange(new object[] {
-            "https://www.minecraft.net/es-es",
-            "https://www.epicgames.com/site/es-ES/home",
-            "https://www.mesoamericana.edu.gt/"});
-            this.addressBar.Location = new System.Drawing.Point(17, 34);
-            this.addressBar.Margin = new System.Windows.Forms.Padding(4);
+            this.addressBar.Location = new System.Drawing.Point(13, 28);
             this.addressBar.Name = "addressBar";
-            this.addressBar.Size = new System.Drawing.Size(1040, 24);
+            this.addressBar.Size = new System.Drawing.Size(781, 21);
             this.addressBar.TabIndex = 2;
             // 
             // webBrowser1
             // 
-            this.webBrowser1.Location = new System.Drawing.Point(13, 66);
-            this.webBrowser1.Margin = new System.Windows.Forms.Padding(4);
-            this.webBrowser1.MinimumSize = new System.Drawing.Size(27, 25);
+            this.webBrowser1.Location = new System.Drawing.Point(0, 82);
+            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(82, 53);
+            this.webBrowser1.Size = new System.Drawing.Size(20, 27);
             this.webBrowser1.TabIndex = 3;
             // 
             // contextMenuStrip1
@@ -135,9 +129,10 @@ namespace pagina_web
             this.webView.AllowExternalDrop = true;
             this.webView.CreationProperties = null;
             this.webView.DefaultBackgroundColor = System.Drawing.Color.White;
-            this.webView.Location = new System.Drawing.Point(0, 140);
+            this.webView.Location = new System.Drawing.Point(0, 114);
+            this.webView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.webView.Name = "webView";
-            this.webView.Size = new System.Drawing.Size(1246, 443);
+            this.webView.Size = new System.Drawing.Size(934, 360);
             this.webView.Source = new System.Uri("https://www.microsoft.com", System.UriKind.Absolute);
             this.webView.TabIndex = 4;
             this.webView.ZoomFactor = 1D;
@@ -145,16 +140,15 @@ namespace pagina_web
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1292, 679);
+            this.ClientSize = new System.Drawing.Size(969, 552);
             this.Controls.Add(this.webView);
             this.Controls.Add(this.webBrowser1);
             this.Controls.Add(this.addressBar);
             this.Controls.Add(this.goButton);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = " ";
             this.Load += new System.EventHandler(this.Form1_Load);
